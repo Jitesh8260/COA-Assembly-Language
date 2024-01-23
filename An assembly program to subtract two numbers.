@@ -1,0 +1,7 @@
+An assembly program to subtract two numbers. 
+
+MVI  A, 51H 
+MVI  B, 19H 
+SUB  B 
+STA  2020H 
+HLT
