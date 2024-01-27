@@ -1,0 +1,36 @@
+Write a program to sort given 10 numbers from memory location 2100H to 2109H in the ascending order.
+MVI B, 09H           ; B is for outer loop 
+
+    START:  LXI HL, 2100H  
+
+ 	 	MVI C, 09H           ; C is for inner lop 
+
+    BACK:    MOV A, M  
+
+ 	 	INX HL           
+
+ 	 	CMP M           
+
+ 	 	JC SKIP        ; Jump if carry 
+
+ 	 	JZ SKIP        ; iff the present zero flag value is 1 
+
+ 	 	MOV D, M 
+
+ 	 	MOV M, A 
+
+ 	 	DCX HL      ; It decreases the memory location pointed by HL pair by 1. 
+
+ 	 	MOV M, D 
+
+ 	 	INX HL           
+
+    SKIP:     DCR C      
+
+ 	 	JNZ BACK 
+
+ 	 	DCR B           
+
+ 	 	JNZ START 
+
+ 	 	HLT￼Enter
