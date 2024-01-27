@@ -1,0 +1,26 @@
+An assembly program to find the largest number from the given array 
+    LXI  	HL, 2100H 
+
+    MOV  	B, M     	; B IS USED TO COUNT THE NUMBERS 
+
+    INX  	HL 	
+
+    MOV  	A, M 	
+
+    DCR  	B 	
+
+L1: INX  	HL 	
+
+    CMP  	M      	; IF A>M THEN GO L2 
+
+    JNC        L2 
+
+    MOV  	A, M          ; Largest among these two should be with A [A=23] 
+
+L2: DCR  	B 
+
+    JNZ       L1 
+
+    STA  	2106H 
+
+    HLT
