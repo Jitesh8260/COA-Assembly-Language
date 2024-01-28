@@ -1,0 +1,19 @@
+Program to find square of 8-bit number. 
+
+MVI H 20H 
+
+MVI L 50H 
+
+MVI A 00H 
+
+MOV B, M 
+
+L: ADD M 
+
+DCR B 
+
+JNZ L 
+
+STA 3050H 
+
+HLT￼Enter
