@@ -1,0 +1,23 @@
+Program to find sum of digit of an 8-bit number 
+
+LDA 2020H 
+
+MOV B, A ANI 0FH 
+
+MOV C, A MOV A, B 
+
+RLC 
+
+RLC 
+
+RLC 
+
+RLC 
+
+ANI 0FH 
+
+ADD C 
+
+STA 2050H 
+
+HLT
