@@ -1,0 +1,25 @@
+An assembly program to multiply two numbers: 
+
+Sample data:  
+
+B: 15H 
+
+C: 04H 
+
+Result: 54H 
+
+Source program:  
+
+MVI  A, 04H MVI  B, 15H 
+
+MOV  C, A 
+
+MVI  A, 00H 
+
+L: 	ADD  B DCR  C 
+
+JNZ  L 
+
+STA  2020H 
+
+HLT
