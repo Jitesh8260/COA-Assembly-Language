@@ -1,0 +1,17 @@
+Assembly Program to Find Largest of Two 8-bit Numbers 
+
+LDA 2050H 
+
+MOV B, A 
+
+LDA 2051H 
+
+CMP B 
+
+JC L 
+
+MOV A, B 
+
+L: STA 2052 
+
+HLT
